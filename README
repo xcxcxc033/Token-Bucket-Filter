@@ -1,0 +1,11 @@
+Emulate a system called “Token Bucket Filter”, as shown in the figure. 
+
+1.	The token bucket has a capacity of B tokens. Tokens arrive into the token bucket according to an uncertain arrival rate r. Extra tokens will be through is the token bucket is full.
+
+2.	The Packets arrive at token the Bucket Filter at a uncertain rate lambda, and each packet require P tokens in order for it to be eligible for transmission. When packet is arriving, if Q1 is not empty, it will wait in a queue until Q1 is empty.
+
+3.	When the packet was filled by tokens in Q1, then it will move to Q2. It means the packet should catch all tokens from bucket to move forward.
+
+4.	When packets with full of tokens arrive into Q2, they should wait for Service-1 and Service to provide services. These 2 service has different service time. Each service could only service one packet once.
+
+5.	Total 4 thread are used, one for packet arrival, one for token arrival, one for each server.
